@@ -1,0 +1,20 @@
+﻿#ID | NOME 	| E-MAIL 		| TELEFONE  | ENDEREÇO
+555 | Mario 	| atradoarmo@email.com 	| 5555-5555 | Rua Gari Setor Ari
+342 | Ash 	| esclhi@email.com 	| 5555-5555 | Rua Vagi Setor Ari
+664 | Mial 	| hocket@email.com 	| 5555-5555 | Rua Nildo Setor Ari
+34  | Pikachu 	| pikapika@email.com 	| 5555-5555 | Rua 55-V
+55  | Esqueleto | gari@email.com	| 5555-5555 | Rua Gari Setor Ari
+432 | He-Man 	| gari@email.com 	| 5555-5555 | Rua Gari Setor Ari
+255 | Goku 	| kakaroto@email.com 	| 5555-5555 | Rua Gari Setor Ari
+890 | Vegita 	| vermemald@email.com 	| 5555-5555 | Rua Seu Verme Inutil
+782 | Bulma 	| bubu@email.com 	| 5555-5555 | Rua Gari Setor Ari
+736 | Goten 	| gogoten@email.com 	| 5555-5555 | Rua da Escola
+13  | Trunks 	| future@email.com 	| 5555-5555 | Rua do futuro
+199 | Yancha 	| achin@email.com 	| 5555-5555 | Rua Chorando pela Bulma
+840 | Caos 	| secuida@email.com 	| 5555-5555 | Rua do Deserto
+932 | Tenchihan | nao_caos@email.com 	| 5555-5555 | Rua do Gelo
+996 | Naruto 	| hockague@email.com 	| 5555-5555 | Rua Atras do Sasuke
+367 | Hinata 	| hihi@email.com 	| 5555-5555 | Rua de Cima da Casa do Naruto
+157 | Sakura 	| sassa@email.com 	| 5555-5555 | Rua da Folha 3
+154 | Kakashi 	| hatake@email.com 	| 5555-5555 | Rua da Folha 2
+187 | Tisunade 	| tisu@email.com 	| 5555-5555 | Rua da Folha
