@@ -9,36 +9,36 @@ int iniciaFila(Fila *f){
         return true;
     }else{
         
-        mostraTela(fl_ja_iniciada);
+        mostraTela("Fila ja foi iniciada.");
         return false;
     }
 }
 
 int insereFila(Fila *f, Dados *d){
     if(f->naoIniciado){
-        mostraTela(fl_nao_inicida);
+        mostraTela("Fila nao foi iniciada.");
         return false;
     }
 
     No *n = malloc(sizeof(No));
     n->dado = d;
-    n->ant = f->fim;
-    f->fim = n;
-    if(filaVazia(f)){
+    if(f->fim != NULL)
+        f->fim->ant = n;
+    else
         f->ini = n;
-    }
-
+    
+    f->fim = n;
     f->tam+=1;
     return true;
 }
 
 Dados* removeFila(Fila *f){
     if(f->naoIniciado){
-        mostraTela(fl_nao_inicida);
+        mostraTela("Fila nao foi iniciada.");
         return false;
     }
     if(filaVazia(f)){
-        mostraTela(fl_vazia);
+        mostraTela("Fila esta vazia.");
         return false;
     }
 
@@ -59,7 +59,7 @@ Dados* removeFila(Fila *f){
 
 int esvaziaFila(Fila *f){
     if(f->naoIniciado){
-        mostraTela (fl_nao_inicida);
+        mostraTela ("Fila nao foi iniciada.");
         return false;
     }
     if(!filaVazia(f)){
@@ -77,7 +77,7 @@ int esvaziaFila(Fila *f){
 
 int filaVazia(Fila *f){
     if(f->naoIniciado){
-        mostraTela(fl_nao_inicida);
+        mostraTela("Fila nao foi iniciada.");
         return false;
     }
     return ((f->ini == NULL) ? true : false);
@@ -85,10 +85,10 @@ int filaVazia(Fila *f){
 
 void mostraFila(Fila *f){
     if(f->naoIniciado){
-        mostraTela(fl_nao_inicida);
+        mostraTela("Fila nao foi iniciada.");
     }
     if(filaVazia(f)){
-        mostraTela(fl_vazia);
+        mostraTela("Fila esta vazia.");
     }
     No *n = f->ini;
     while(n){

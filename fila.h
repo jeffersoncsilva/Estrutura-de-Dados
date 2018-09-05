@@ -1,9 +1,9 @@
 #include "base.h"
-
+/*
 char fl_nao_inicida[] = "Fila nao foi iniciada.";
 char fl_vazia[] = "Fila esta vazia.";
 char fl_ja_iniciada[] = "Fila ja foi iniciada.";
-
+*/
 typedef struct fila{
     No *ini;
     No *fim;
