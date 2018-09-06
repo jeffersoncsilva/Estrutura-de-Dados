@@ -8,7 +8,6 @@ int iniciaFila(Fila *f){
         f->naoIniciado = false;
         return true;
     }else{
-        
         mostraTela("Fila ja foi iniciada.");
         return false;
     }

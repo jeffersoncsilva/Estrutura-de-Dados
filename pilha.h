@@ -1,3 +1,6 @@
+#ifndef _PILHA_
+#define _PILA_
+
 #include "base.h"
 
 typedef struct pilha{
@@ -15,3 +18,6 @@ Dados* removePilha(Pilha *p);
 void mostraPilha(Pilha *p);
 
 int pilhaVazia(Pilha *p);
+
+
+#endif

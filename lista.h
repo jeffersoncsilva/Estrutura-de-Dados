@@ -1,3 +1,6 @@
+#ifndef _LISTA_
+#define _LISTA_
+
 #include "base.h"
 
 typedef struct lista{
@@ -27,4 +30,4 @@ int tamanhoLista(Lista *l);
 void mostraLista(Lista *l);
 
 
-
+#endif

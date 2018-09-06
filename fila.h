@@ -1,3 +1,5 @@
+#ifndef _FILA_
+#define _FILA_
 #include "base.h"
 /*
 char fl_nao_inicida[] = "Fila nao foi iniciada.";
@@ -20,3 +22,5 @@ int esvaziaFila(Fila *f);
 int filaVazia(Fila *f);
 
 void mostraFila(Fila *f);
+
+#endif

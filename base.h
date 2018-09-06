@@ -1,9 +1,7 @@
-
-/*
-	Biblioteca base com funcoes bases.
+/*Biblioteca base com funcoes bases.*/
 #ifndef _BASE_H
 #define _BASE_H
-*/
+
 
 
 #include <stdio.h>
@@ -49,4 +47,4 @@ Lista* criaLista(FILE *arq);
 */
 void mostraTela(char msg[]);
 
-//#endif
+#endif

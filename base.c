@@ -3,11 +3,11 @@
 
 void mostraDados(Dados *d){
 	if(d!=NULL){
-	printf("ID: %d\n", d->id);
-	printf("Nome: %s\n", d->nome);
-	printf("Tel: %s\n", d->telefone);
-	printf("E-mail: %s\n", d->email);
-	printf("Endereco: %s\n", d->endereco);
+		printf("ID: %d ", d->id);
+		printf("Nome: %s\n", d->nome);
+		printf("Tel: %s\n", d->telefone);
+		printf("E-mail: %s\n", d->email);
+		printf("Endereco: %s\n", d->endereco);
 	}else{
 		printf("ERRO: DADOS INVALIDOS.\n");
 	}
