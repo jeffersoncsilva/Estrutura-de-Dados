@@ -1,7 +1,8 @@
-#include<stdio.h>
 #include "lista.h"
 #include "pilha.h"
 #include "fila.h"
+#include "arvore.h"
+
 
 void criaLista(FILE *a, Lista *lst){
 	iniciaLista(lst);
@@ -21,12 +22,21 @@ void criaPilha(FILE *arq, Pilha *p){
 	}
 }
 
-Fila* criaFila(FILE *arq, Fila *fila){
+void criaFila(FILE *arq, Fila *fila){
 	iniciaFila(fila);
 	char linha[200];
 	fgets(linha, 200, arq);
 	while(fgets(linha, 200, arq)){
 		insereFila(fila, converteDados(linha));
+	}
+}
+
+void criaArvore(FILE *arq, Arvore *arv){
+	iniciaArvore(arv);
+	char linha[200];
+	fgets(linha, 200, arq);
+	while(fgets(linha, 200, arq)){
+		insereArvore(arv, converteDados(linha));
 	}
 }
 
@@ -37,6 +47,16 @@ int main(){
 		printf("Arquivo nao carregado.");
 		return 0;
 	}
+
+	Arvore arv;
+	criaArvore(arquivo, &arv);
+	printf("\nIn-Ordem: \n");
+	inOrdem(arv.raiz);
+	printf("\n\nPre-Ordem: \n");
+	preOrdem(arv.raiz);
+	printf("\n\nPos-Ordem: \n");
+	posOrdem(arv.raiz);
+	printf("\n");
 	/*
 	Lista lst;
 	printf("LISTA: ");
@@ -53,11 +73,11 @@ int main(){
 	
 	arquivo = NULL;
 	arquivo = carregaArquivo();
-	*/
 	printf("PILHA: ");
 	Pilha p;
 	criaPilha(arquivo, &p);
 	mostraPilha(&p);
+	*/
 
 	return 0;
 }

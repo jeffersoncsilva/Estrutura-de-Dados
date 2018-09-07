@@ -2,11 +2,10 @@
 #ifndef _BASE_H
 #define _BASE_H
 
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 
 
 
@@ -38,13 +37,7 @@ void mostraNo(No *n);
 FILE * carregaArquivo();
 
 Dados* converteDados(char *linha);
-/*
-Pilha* criaPilha(FILE *arq);
 
-Fila* criaFila(FILE *arq);
-
-Lista* criaLista(FILE *arq);
-*/
 void mostraTela(char msg[]);
 
 #endif
