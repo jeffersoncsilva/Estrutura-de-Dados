@@ -50,13 +50,18 @@ int main(){
 
 	Arvore arv;
 	criaArvore(arquivo, &arv);
-	printf("\nIn-Ordem: \n");
+
+	printf("\n\n");
 	inOrdem(arv.raiz);
-	printf("\n\nPre-Ordem: \n");
-	preOrdem(arv.raiz);
-	printf("\n\nPos-Ordem: \n");
-	posOrdem(arv.raiz);
-	printf("\n");
+
+	/*
+	printf("\nIn-Ordem antes de remover o 34: \n\n");
+	inOrdem(arv.raiz);
+	removeNo(&arv, 34);
+	printf("\n\n\nIn-Ordem depois de remover o 34: \n\n\n");
+	inOrdem(arv.raiz);
+	printf("\n\n\n");
+
 	/*
 	Lista lst;
 	printf("LISTA: ");

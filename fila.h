@@ -1,11 +1,7 @@
 #ifndef _FILA_
 #define _FILA_
 #include "base.h"
-/*
-char fl_nao_inicida[] = "Fila nao foi iniciada.";
-char fl_vazia[] = "Fila esta vazia.";
-char fl_ja_iniciada[] = "Fila ja foi iniciada.";
-*/
+
 typedef struct fila{
     No *ini;
     No *fim;
@@ -14,8 +10,11 @@ typedef struct fila{
 }Fila;
 
 int iniciaFila(Fila *f);
+
 /*E usado o ponteiro ant para o proximo no da fila.*/
 int insereFila(Fila *f, Dados *d);
+
+Dados* removeFila(Fila *f);
 
 int esvaziaFila(Fila *f);
 
