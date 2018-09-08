@@ -83,3 +83,8 @@ void copyData(Dados *d1, Dados *d2){
 
 }
 
+//retorna o maior inteiro.
+int max(int a, int b){
+	return (a > b ? a : b);
+}
+

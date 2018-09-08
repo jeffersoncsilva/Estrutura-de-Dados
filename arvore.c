@@ -1,10 +1,12 @@
 #include "arvore.h"
 #include "fila.h"
 
+//Inicia a arvore.
 int iniciaArvore(Arvore *a){
     a->raiz = NULL;
 }
 
+//Mostra a arvore em ordem na forma ERD.
 void inOrdem(No *n){
     if(n != NULL){
         inOrdem(n->left);
@@ -13,6 +15,7 @@ void inOrdem(No *n){
     }
 }
 
+//Mostra a arvore em pre-ordem na forma RED.
 void preOrdem(No *n){
     if(n != NULL){
         mostraNo(n);
@@ -21,6 +24,7 @@ void preOrdem(No *n){
     }
 }
 
+//Mostra a arvore no percursso pos-ordem na forma EDR
 void posOrdem(No *n){
     if(n != NULL){
         posOrdem(n->left);
@@ -29,6 +33,7 @@ void posOrdem(No *n){
     }
 }
 
+//Insere um dado na arvore usando laco de repetissao.
 int insereArvore(Arvore *a, Dados *d){
     No *novo = malloc(sizeof(No));
     novo->dado = d;
@@ -65,6 +70,7 @@ int insereArvore(Arvore *a, Dados *d){
     return true;
 }
 
+//Remove um no da arvore usando laco de repeticao.
 Dados* removeNo(Arvore *a, int ch){
     if(a->raiz == NULL){
         printf("Arvore vazia.");
@@ -125,6 +131,7 @@ Dados* removeNo(Arvore *a, int ch){
     }
 }
 
+//Cada nivel da arvore em uma linha.
 void imprimeLargura(Arvore *a){
     Fila nv_atual, nv_seguinte;
     initialize(&nv_atual);
@@ -147,3 +154,57 @@ void imprimeLargura(Arvore *a){
         }
     }
 }
+
+//Retorna a altura de um no.
+int heightNode(No *n){
+    if(n== NULL)
+        return -1;
+
+    return (max(heightNode(n->left), heightNode(n->right)) + 1);    
+}
+
+//Retorna a altura da arvore.
+int getHeightTree(Arvore *a){
+    if(a == NULL){
+        mostraTela("Arvore vazia.");
+        return -1;
+    }
+    return heightNode(a->raiz);
+}
+
+int countNodes(No *n){
+    if(n == NULL)
+        return 0;
+    return (countNodes(n->left) + 1 + countNodes(n->right));
+}
+
+//Conta a quantidade de nos na arvore.
+int countTree(Arvore *a){
+    if(a == NULL){
+        mostraTela("Arvore invalida.");
+        return -1;
+    }
+    return countNodes(a->raiz);
+}
+
+//Busca o  novo lugar do no e adiciona ele como filho de outro.s
+No *insertNode(No *r, No *nv){
+    if(r == NULL)
+        return nv;
+    if(r->dado->id > nv->dado->id)
+        r->left = insertNode(r->left, nv);
+    else
+        r->right = insertNode(r->right, nv);
+}
+
+//Insere um novo no na arvore de forma de forma recursiva.
+int insertBtree(Arvore *a, Dados *d){
+    if(a == NULL){
+        mostraTela("Arvore invalida.");
+        return false;
+    }
+    No *novo = criaNo(d);
+    a->raiz = insertNode(a->raiz, novo);
+    return true;
+}
+

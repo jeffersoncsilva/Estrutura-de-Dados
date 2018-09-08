@@ -45,4 +45,6 @@ No* criaNo(Dados *d);
 //Copia d1 para d2.
 void copyData(Dados *d1, Dados *d2);
 
+//retorna o maior inteiro.
+int max(int a, int b);
 #endif

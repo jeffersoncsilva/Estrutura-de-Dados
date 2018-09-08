@@ -37,7 +37,9 @@ void criaArvore(FILE *arq, Arvore *arv){
 	char linha[200];
 	fgets(linha, 200, arq);
 	while(fgets(linha, 200, arq)){
-		insereArvore(arv, converteDados(linha));
+		Dados *d = converteDados(linha);
+		insertBtree(arv, d);
+		//insereArvore(arv, converteDados(linha));
 	}
 }
 
@@ -48,12 +50,13 @@ int main(){
 		return 0;
 	}
 
-	Fila f;
-	criaFila(arquivo, &f);
-	show(&f);
-	printf("\nClone: \n");
-	Fila *f2 = clone(&f);
-	show(f2);
-	printf("\n");
+	Arvore a;
+	criaArvore(arquivo, &a);
+	
+	imprimeLargura(&a);
+	
+	int alt = getHeightTree(&a);;
+	printf("\nAltura arvore: %d\n", alt);
+	
 	return 0;
 }
