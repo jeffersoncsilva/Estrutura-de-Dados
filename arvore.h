@@ -14,3 +14,4 @@ void inOrdem(No *n);
 void preOrdem(No *n);
 void posOrdem(No *n);
 
+void imprimeLargura(Arvore *a);

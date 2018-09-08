@@ -125,4 +125,25 @@ Dados* removeNo(Arvore *a, int ch){
     }
 }
 
+void imprimeLargura(Arvore *a){
+    Fila nv_atual, nv_seguinte;
+    initialize(&nv_atual);
+    initialize(&nv_seguinte);
 
+    enqueueNode(&nv_atual, a->raiz);
+
+    while(!empty(&nv_atual)){
+        No *no_atual = dequeueNode(&nv_atual);
+        if(no_atual){
+            mostraNo(no_atual);
+            if(no_atual->left != NULL)
+                enqueueNode(&nv_seguinte, no_atual->left);
+            if(no_atual->right != NULL)
+                enqueueNode(&nv_seguinte, no_atual->right);
+        }
+        if(empty(&nv_atual)){
+            printf("\n");
+            swap(&nv_atual, &nv_seguinte);
+        }
+    }
+}

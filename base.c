@@ -62,4 +62,24 @@ void mostraTela(char msg[]){
 	printf("%s/n", msg);
 }
 
+//Cria um novo no com os dados passados e com todos os ponteiros para NULL.
+No *criaNo(Dados *d){
+	No *n = malloc(sizeof(No));
+	n->dado = d;
+	n->ant = NULL;
+	n->prox = NULL;
+	n->left = NULL;
+	n->right = NULL;
+	return n;
+}
+
+//Copia d1 para d2.
+void copyData(Dados *d1, Dados *d2){
+	strcpy(d2->nome, d1->nome);
+	strcpy(d2->email, d1->email);
+	strcpy(d2->telefone, d1->telefone);
+	strcpy(d2->endereco, d1->telefone);
+	d2->id = d1->id;
+
+}
 

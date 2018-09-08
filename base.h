@@ -40,4 +40,9 @@ Dados* converteDados(char *linha);
 
 void mostraTela(char msg[]);
 
+No* criaNo(Dados *d);
+
+//Copia d1 para d2.
+void copyData(Dados *d1, Dados *d2);
+
 #endif

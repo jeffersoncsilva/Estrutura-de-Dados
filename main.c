@@ -23,11 +23,12 @@ void criaPilha(FILE *arq, Pilha *p){
 }
 
 void criaFila(FILE *arq, Fila *fila){
-	iniciaFila(fila);
+	initialize(fila);
 	char linha[200];
 	fgets(linha, 200, arq);
 	while(fgets(linha, 200, arq)){
-		insereFila(fila, converteDados(linha));
+		Dados *d = converteDados(linha);
+		enqueue(fila, d);
 	}
 }
 
@@ -41,48 +42,18 @@ void criaArvore(FILE *arq, Arvore *arv){
 }
 
 int main(){
-
 	FILE *arquivo = carregaArquivo();
 	if(arquivo==NULL){
 		printf("Arquivo nao carregado.");
 		return 0;
 	}
 
-	Arvore arv;
-	criaArvore(arquivo, &arv);
-
-	printf("\n\n");
-	inOrdem(arv.raiz);
-
-	/*
-	printf("\nIn-Ordem antes de remover o 34: \n\n");
-	inOrdem(arv.raiz);
-	removeNo(&arv, 34);
-	printf("\n\n\nIn-Ordem depois de remover o 34: \n\n\n");
-	inOrdem(arv.raiz);
-	printf("\n\n\n");
-
-	/*
-	Lista lst;
-	printf("LISTA: ");
-	criaLista(arquivo, &lst);
-	mostraLista(&lst);
-	printf("\n\n\n");
-
-	arquivo = carregaArquivo();
-	printf("FILA: ");
-	Fila fila;
-	criaFila(arquivo, &fila);
-	mostraFila(&fila);
-	printf("\n\n\n");
-	
-	arquivo = NULL;
-	arquivo = carregaArquivo();
-	printf("PILHA: ");
-	Pilha p;
-	criaPilha(arquivo, &p);
-	mostraPilha(&p);
-	*/
-
+	Fila f;
+	criaFila(arquivo, &f);
+	show(&f);
+	printf("\nClone: \n");
+	Fila *f2 = clone(&f);
+	show(f2);
+	printf("\n");
 	return 0;
 }
