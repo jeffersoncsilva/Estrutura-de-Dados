@@ -88,3 +88,31 @@ int max(int a, int b){
 	return (a > b ? a : b);
 }
 
+//Mostra a arvore em ordem na forma ERD.
+void inOrdem(No *n){
+    if(n != NULL){
+        inOrdem(n->left);
+        mostraNo(n);
+        inOrdem(n->right);
+    }
+}
+
+
+//Mostra a arvore em pre-ordem na forma RED.
+void preOrdem(No *n){
+    if(n != NULL){
+        mostraNo(n);
+        preOrdem(n->left);
+        preOrdem(n->right);
+    }
+}
+
+//Mostra a arvore no percursso pos-ordem na forma EDR
+void posOrdem(No *n){
+    if(n != NULL){
+        posOrdem(n->left);
+        posOrdem(n->right);
+        mostraNo(n);
+    }
+}
+

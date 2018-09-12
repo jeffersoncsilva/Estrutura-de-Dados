@@ -6,33 +6,6 @@ int iniciaArvore(Arvore *a){
     a->raiz = NULL;
 }
 
-//Mostra a arvore em ordem na forma ERD.
-void inOrdem(No *n){
-    if(n != NULL){
-        inOrdem(n->left);
-        mostraNo(n);
-        inOrdem(n->right);
-    }
-}
-
-//Mostra a arvore em pre-ordem na forma RED.
-void preOrdem(No *n){
-    if(n != NULL){
-        mostraNo(n);
-        preOrdem(n->left);
-        preOrdem(n->right);
-    }
-}
-
-//Mostra a arvore no percursso pos-ordem na forma EDR
-void posOrdem(No *n){
-    if(n != NULL){
-        posOrdem(n->left);
-        posOrdem(n->right);
-        mostraNo(n);
-    }
-}
-
 //Insere um dado na arvore usando laco de repetissao.
 int insereArvore(Arvore *a, Dados *d){
     No *novo = malloc(sizeof(No));

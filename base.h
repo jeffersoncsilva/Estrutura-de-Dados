@@ -47,4 +47,12 @@ void copyData(Dados *d1, Dados *d2);
 
 //retorna o maior inteiro.
 int max(int a, int b);
+
+//Mostra a arvore em ordem na forma ERD.
+void inOrdem(No *n);
+//Mostra a arvore em pre-ordem na forma RED.
+void preOrdem(No *n);
+//Mostra a arvore no percursso pos-ordem na forma EDR
+void posOrdem(No *n);
+
 #endif

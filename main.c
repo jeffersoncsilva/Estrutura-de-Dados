@@ -53,10 +53,13 @@ int main(){
 	Arvore a;
 	criaArvore(arquivo, &a);
 	
-	imprimeLargura(&a);
+	inOrdem(a.raiz);
 	
-	int alt = getHeightTree(&a);;
-	printf("\nAltura arvore: %d\n", alt);
+	printf("\n");
+	preOrdem(a.raiz);
+	printf("\n");
+	posOrdem(a.raiz);
+	printf("\n");
 	
 	return 0;
 }

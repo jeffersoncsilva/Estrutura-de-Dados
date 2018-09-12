@@ -19,13 +19,6 @@ int getHeightTree(Arvore *a);
 //Conta a quantidade de nos na arvore.
 int countTree(Arvore *a);
 
-//Mostra a arvore em ordem na forma ERD.
-void inOrdem(No *n);
-//Mostra a arvore em pre-ordem na forma RED.
-void preOrdem(No *n);
-//Mostra a arvore no percursso pos-ordem na forma EDR
-void posOrdem(No *n);
-
 //Cada nivel da arvore em uma linha.
 void imprimeLargura(Arvore *a);
 
