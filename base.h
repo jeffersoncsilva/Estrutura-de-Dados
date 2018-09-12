@@ -24,6 +24,7 @@ typedef struct dados{
 
 typedef struct no{
 	Dados *dado;
+	int height;
 	struct no *prox;
 	struct no *ant;
 	struct no *left;

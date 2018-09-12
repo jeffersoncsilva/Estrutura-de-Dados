@@ -2,7 +2,7 @@
 #include "pilha.h"
 #include "fila.h"
 #include "arvore.h"
-
+#include "avl.h"
 
 void criaLista(FILE *a, Lista *lst){
 	iniciaLista(lst);
@@ -43,6 +43,17 @@ void criaArvore(FILE *arq, Arvore *arv){
 	}
 }
 
+void criaArvoreAvl(FILE *arq, AvlTree *avl){
+	iniciaArvoreAvl(avl);
+	char linha[200];
+	fgets(linha, 200, arq);
+	while(fgets(linha, 200, arq)){
+		Dados *d = converteDados(linha);
+		insertAvlAux(avl, d);
+		 
+	}
+}
+
 int main(){
 	FILE *arquivo = carregaArquivo();
 	if(arquivo==NULL){
@@ -50,15 +61,15 @@ int main(){
 		return 0;
 	}
 
-	Arvore a;
-	criaArvore(arquivo, &a);
+	AvlTree a;
+	criaArvoreAvl(arquivo, &a);
 	
-	inOrdem(a.raiz);
+	inOrdem(a.root);
 	
 	printf("\n");
-	preOrdem(a.raiz);
+	preOrdem(a.root);
 	printf("\n");
-	posOrdem(a.raiz);
+	posOrdem(a.root);
 	printf("\n");
 	
 	return 0;

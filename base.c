@@ -65,6 +65,7 @@ void mostraTela(char msg[]){
 //Cria um novo no com os dados passados e com todos os ponteiros para NULL.
 No *criaNo(Dados *d){
 	No *n = malloc(sizeof(No));
+	n->height = 0;
 	n->dado = d;
 	n->ant = NULL;
 	n->prox = NULL;
