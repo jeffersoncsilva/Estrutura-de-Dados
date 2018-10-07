@@ -65,12 +65,11 @@ int main(){
 	criaArvoreAvl(arquivo, &a);
 	
 	inOrdem(a.root);
-	
+	printf("\n");
+	removeAvl(&a, 342);
+	inOrdem(a.root);
 	printf("\n");
 	preOrdem(a.root);
 	printf("\n");
-	posOrdem(a.root);
-	printf("\n");
-	
 	return 0;
 }
