@@ -16,7 +16,7 @@ int initialize(Fila *f);
 int count(Fila *f);
 
 //Limpa toda a fila.
-int clear(Fila *f);
+int clearFila(Fila *f);
 
 //Cria uma nova fila e retorna o endereco dela.
 Fila* clone (Fila *f);

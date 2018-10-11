@@ -19,7 +19,6 @@ void mostraNo(No *n){
 	}else{
 		mostraDados(n->dado);
 	}
-
 }
 
 FILE *carregaArquivo(){
@@ -98,7 +97,6 @@ void inOrdem(No *n){
     }
 }
 
-
 //Mostra a arvore em pre-ordem na forma RED.
 void preOrdem(No *n){
     if(n != NULL){
@@ -116,4 +114,3 @@ void posOrdem(No *n){
         mostraNo(n);
     }
 }
-

@@ -20,7 +20,7 @@ int count(Fila *f){
 }
 
 //Limpa toda a fila.
-int clear(Fila *f){
+int clearFila(Fila *f){
     while(f->ini != NULL){
         free(dequeue(f));
     }

@@ -60,16 +60,6 @@ int main(){
 		printf("Arquivo nao carregado.");
 		return 0;
 	}
-
-	AvlTree a;
-	criaArvoreAvl(arquivo, &a);
 	
-	inOrdem(a.root);
-	printf("\n");
-	removeAvl(&a, 342);
-	inOrdem(a.root);
-	printf("\n");
-	preOrdem(a.root);
-	printf("\n");
 	return 0;
 }

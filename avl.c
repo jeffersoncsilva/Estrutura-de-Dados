@@ -2,7 +2,6 @@
 
 /**********************************************Metodos privados da AVL************************/
 
-
 //Realiza uma rotacao a esquerda.
 No* leftRotate(No *n){
     No *nright = n->right;
@@ -12,7 +11,6 @@ No* leftRotate(No *n){
     nright->height = max(height(nright->left), height(nright->right))+1;
     return nright;
 }
-
 //Realiza uma rotacao a direita.
 No* rightRotate(No *n){
     No *nleft = n->left;
@@ -140,4 +138,6 @@ Dados* removeAvl(AvlTree *avl, int ch){
         return NULL;
     }else
         return d;
-} 
+}
+
+
